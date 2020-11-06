@@ -3,11 +3,25 @@
 <head>
 <body>
 <script>
-    alert("Do you wanna build a snow... I mean -- do you wanna play a game?");
-    prompt("choose your weapon: rock, paper, or scisscors!");
-    function playRound(playerSelection, computerSelection) {
+     alert("Do you wanna build a snow... I mean -- do you wanna play a game?");
+    function computerSelection() {
+        let max = 3;
+        let choice = Math.floor(Math.random() * Math.floor(max));
 
+        if(choice==0) {
+            return "rock";
+        }else if(choice==1){
+            return "paper";
+        }else if(choice==2){
+            return "scissors";
+        }
     }
+    console.log(computerSelection());
+    function playRound(playerSelection, computerSelection) {
+        prompt("choose your weapon: rock, paper, or scisscors!");
+        let input = document.getElementById("playerSelection").value;
+    }
+
 </script>
 </body>
 </head>
