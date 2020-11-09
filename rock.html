@@ -25,11 +25,65 @@
         const playerSelection = prompt("choose your weapon: rock, paper, or scisscors!").toLowerCase();
         const computerSelection = computerGo();
 
-        console.log("Player: " + playerSelection);
+        console.log("Human: " + playerSelection);
         console.log("Computer: " + computerSelection);
 
-    }
-    console.log(playRound());
+        if(playerSelection === 'rock'){
+            if(computerSelection === 'rock'){
+                tieScore++;
+                alert("Rock ties rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+            }else if(computerSelection === 'paper'){
+                computerScore++;
+                alert("Rock is beaten by paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+            }else if(computerSelection === 'scissors'){
+                playerScore++;
+                alert("Rock beats scissors." + '\n' + "Human: " + playerScore + ' \| ' + "Computer: " + computerScore);
+            }    
+        } else if(playerSelection === 'paper'){
+                    if(computerSelection === 'rock') {
+                        playerScore++;
+                        alert("Paper beats rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'scissors'){
+                        computerScore++;
+                        alert("Paper is beaten by scissors." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'paper'){
+                        tieScore++;
+                        alert("Paper ties paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    }
+        } else if(playerSelection === 'scissors'){
+                    if(computerSelection === 'rock') {
+                        computerScore++;
+                        alert("Scissors is beaten by rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'scissors'){
+                        tieScore++;
+                        alert("Scissors ties scissors."  + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'paper'){
+                        playerScore++;
+                        alert("Scissors beats paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+            }
+            }
+        }
+    function game(){
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        console.log("Final Score\= H: " + playerScore + " to " + "C: " + computerScore);
+        if(playerScore>computerScore){
+            alert("Game over. Human wins!" + ' ' + playerScore + ' to ' + computerScore)
+        }else if(playerScore==computerScore){
+            alert("Game over. Tie!" + ' ' + playerScore + ' to ' +computerScore)
+        }else{
+            alert("Game over. Computer wins!" + ' ' + playerScore + ' to ' + computerScore)
+        }
+        }
+    game();
 </script>
 </body>
 </head>
