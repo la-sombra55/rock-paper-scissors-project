@@ -4,7 +4,7 @@
 <body>
 <script>
      alert("Do you wanna build a snow... I mean -- do you wanna play a game?");
-    function computerSelection() {
+    function computerGo() {
         let max = 3;
         let choice = Math.floor(Math.random() * Math.floor(max));
 
@@ -16,12 +16,20 @@
             return "scissors";
         }
     }
-    console.log(computerSelection());
-    function playRound(playerSelection, computerSelection) {
-        prompt("choose your weapon: rock, paper, or scisscors!");
-        let input = document.getElementById("playerSelection").value;
-    }
 
+    let playerScore = 0;
+    let computerScore = 0;
+    let tieScore = 0;
+
+    function playRound() {
+        const playerSelection = prompt("choose your weapon: rock, paper, or scisscors!").toLowerCase();
+        const computerSelection = computerGo();
+
+        console.log("Player: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+
+    }
+    console.log(playRound());
 </script>
 </body>
 </head>
