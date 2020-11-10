@@ -1,37 +1,90 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script>
+     alert("Do you wanna build a snow... I mean -- do you wanna play a game?");
+    function computerGo() {
+        let max = 3;
+        let choice = Math.floor(Math.random() * Math.floor(max));
 
-You can use the [editor on GitHub](https://github.com/la-sombra55/rock-paper-scissors-project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+        if(choice==0) {
+            return "rock";
+        }else if(choice==1){
+            return "paper";
+        }else if(choice==2){
+            return "scissors";
+        }
+    }
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    let playerScore = 0;
+    let computerScore = 0;
+    let tieScore = 0;
 
-### Markdown
+    function playRound() {
+        const playerSelection = prompt("choose your weapon: rock, paper, or scisscors!").toLowerCase();
+        const computerSelection = computerGo();
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        console.log("Human: " + playerSelection);
+        console.log("Computer: " + computerSelection);
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/la-sombra55/rock-paper-scissors-project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+        if(playerSelection === 'rock'){
+            if(computerSelection === 'rock'){
+                tieScore++;
+                alert("Rock ties rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+            }else if(computerSelection === 'paper'){
+                computerScore++;
+                alert("Rock is beaten by paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+            }else if(computerSelection === 'scissors'){
+                playerScore++;
+                alert("Rock beats scissors." + '\n' + "Human: " + playerScore + ' \| ' + "Computer: " + computerScore);
+            }    
+        } else if(playerSelection === 'paper'){
+                    if(computerSelection === 'rock') {
+                        playerScore++;
+                        alert("Paper beats rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'scissors'){
+                        computerScore++;
+                        alert("Paper is beaten by scissors." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'paper'){
+                        tieScore++;
+                        alert("Paper ties paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    }
+        } else if(playerSelection === 'scissors'){
+                    if(computerSelection === 'rock') {
+                        computerScore++;
+                        alert("Scissors is beaten by rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'scissors'){
+                        tieScore++;
+                        alert("Scissors ties scissors."  + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                    } else if(computerSelection === 'paper'){
+                        playerScore++;
+                        alert("Scissors beats paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+            }
+            }
+        }
+    function game(){
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        playRound();
+        console.log("H: " + playerScore + " to " + "C: " + computerScore);
+        console.log("Final Score\= H: " + playerScore + " to " + "C: " + computerScore);
+        if(playerScore>computerScore){
+            alert("Game over. Human wins!" + ' ' + playerScore + ' to ' + computerScore)
+        }else if(playerScore==computerScore){
+            alert("Game over. Tie!" + ' ' + playerScore + ' to ' +computerScore)
+        }else{
+            alert("Game over. Computer wins!" + ' ' + playerScore + ' to ' + computerScore)
+        }
+        }
+    game();
+</script>
+</body>
+</head>
+</html>
