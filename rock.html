@@ -31,35 +31,35 @@
         if(playerSelection === 'bryan'){
             if(computerSelection === 'bryan'){
                 tieScore++;
-                alert("bryan ties bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                alert("bryan ties bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
             }else if(computerSelection === 'caitlin'){
                 computerScore++;
-                alert("bryan is destroyed by caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                alert("bryan is destroyed by caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
             }else if(computerSelection === 'garrett'){
                 playerScore++;
-                alert("bryan destroys garrett." + '\n' + "Human: " + playerScore + ' \| ' + "Computer: " + computerScore);
+                alert("bryan destroys garrett." + '\n' + "Human: " + playerScore + ' \| ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
             }    
         } else if(playerSelection === 'caitlin'){
                     if(computerSelection === 'bryan') {
                         playerScore++;
-                        alert("caitlin destroys bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("caitlin destroys bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
                     } else if(computerSelection === 'garrett'){
                         computerScore++;
-                        alert("caitlin is destroyed by garrett." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("caitlin is destroyed by garrett." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
                     } else if(computerSelection === 'caitlin'){
                         tieScore++;
-                        alert("caitlin ties caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("caitlin ties caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
                     }
         } else if(playerSelection === 'garrett'){
                     if(computerSelection === 'bryan') {
                         computerScore++;
-                        alert("garrett is destroyed by bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("garrett is destroyed by bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
                     } else if(computerSelection === 'garrett'){
                         tieScore++;
-                        alert("garrett ties garrett."  + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("garrett ties garrett."  + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
                     } else if(computerSelection === 'caitlin'){
                         playerScore++;
-                        alert("garrett destroys caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("garrett destroys caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
             }
             }
         }
