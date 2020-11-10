@@ -9,11 +9,11 @@
         let choice = Math.floor(Math.random() * Math.floor(max));
 
         if(choice==0) {
-            return "rock";
+            return "bryan";
         }else if(choice==1){
-            return "paper";
+            return "caitlin";
         }else if(choice==2){
-            return "scissors";
+            return "garrett";
         }
     }
 
@@ -22,44 +22,44 @@
     let tieScore = 0;
 
     function playRound() {
-        const playerSelection = prompt("choose your weapon: rock, paper, or scisscors!").toLowerCase();
+        const playerSelection = prompt("choose your weapon: bryan, caitlin, or garrett!").toLowerCase();
         const computerSelection = computerGo();
 
         console.log("Human: " + playerSelection);
         console.log("Computer: " + computerSelection);
 
-        if(playerSelection === 'rock'){
-            if(computerSelection === 'rock'){
+        if(playerSelection === 'bryan'){
+            if(computerSelection === 'bryan'){
                 tieScore++;
-                alert("Rock ties rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
-            }else if(computerSelection === 'paper'){
+                alert("bryan ties bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
+            }else if(computerSelection === 'caitlin'){
                 computerScore++;
-                alert("Rock is beaten by paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
-            }else if(computerSelection === 'scissors'){
+                alert("bryan is destroyed by caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
+            }else if(computerSelection === 'garrett'){
                 playerScore++;
-                alert("Rock beats scissors." + '\n' + "Human: " + playerScore + ' \| ' + "Computer: " + computerScore);
+                alert("bryan destroys garrett." + '\n' + "Human: " + playerScore + ' \| ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
             }    
-        } else if(playerSelection === 'paper'){
-                    if(computerSelection === 'rock') {
+        } else if(playerSelection === 'caitlin'){
+                    if(computerSelection === 'bryan') {
                         playerScore++;
-                        alert("Paper beats rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
-                    } else if(computerSelection === 'scissors'){
+                        alert("caitlin destroys bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
+                    } else if(computerSelection === 'garrett'){
                         computerScore++;
-                        alert("Paper is beaten by scissors." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
-                    } else if(computerSelection === 'paper'){
+                        alert("caitlin is destroyed by garrett." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
+                    } else if(computerSelection === 'caitlin'){
                         tieScore++;
-                        alert("Paper ties paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("caitlin ties caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
                     }
-        } else if(playerSelection === 'scissors'){
-                    if(computerSelection === 'rock') {
+        } else if(playerSelection === 'garrett'){
+                    if(computerSelection === 'bryan') {
                         computerScore++;
-                        alert("Scissors is beaten by rock." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
-                    } else if(computerSelection === 'scissors'){
+                        alert("garrett is destroyed by bryan." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
+                    } else if(computerSelection === 'garrett'){
                         tieScore++;
-                        alert("Scissors ties scissors."  + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
-                    } else if(computerSelection === 'paper'){
+                        alert("garrett ties garrett."  + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
+                    } else if(computerSelection === 'caitlin'){
                         playerScore++;
-                        alert("Scissors beats paper." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore);
+                        alert("garrett destroys caitlin." + '\n' + "Human: " + playerScore + '  \|  ' + "Computer: " + computerScore + '  \|  ' + "Tie: " + tieScore);
             }
             }
         }
